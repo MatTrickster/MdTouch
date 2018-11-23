@@ -13,6 +13,7 @@ from PyQt5.QtWidgets import *
 from DialogBox.EventDialogBox import *
 from DialogBox.changePassword import *
 from DialogBox.AddNewMedicineDialogBox import *
+from DialogBox.MedicineInfodialogBox import *
 
 class Ui_DispensaryMainWindow(object):
     def setupUi(self, DispensaryMainWindow,username):

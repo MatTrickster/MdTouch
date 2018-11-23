@@ -186,6 +186,16 @@ class Ui_MainLoginWindow(object):
         elif l[0][0] == 'B':
             self.bloodbankadminpage = Ui_BloodBankMainWindow()
             self.bloodbankadminpage.setupUi(MainLoginWindow)
+        elif l[0][0] == 'D':
+            # Doctor Ka Kholna hai
+            pass
+        elif l[0][0] == 'T':
+            # Open Test Center
+            pass
+        elif l[0][0] == 'ES':
+            #Open Emergency Services
+        else:
+            # Nothing
 
 
         conn.close()

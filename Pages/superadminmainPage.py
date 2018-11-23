@@ -479,6 +479,8 @@ class Ui_MainWindow(object):
         # Add Nurse
         self.remove_test_button_3.clicked.connect(lambda: self.addNurseFunction(MainWindow))
 
+
+
     # Logout Functionality
 
     def logoutFunction(self,MainWindow):

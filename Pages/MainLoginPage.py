@@ -108,8 +108,8 @@ class Ui_MainLoginWindow(object):
         self.passwordLabel.setText(_translate("MainLoginWindow", "PASSWORD"))
         self.forgotPasswordLink.setText(_translate("MainLoginWindow", "FORGOT PASSWORD?"))
 
-        #self.eventsUi(MainLoginWindow)
-        self.loginEvent(MainLoginWindow)
+        self.eventsUi(MainLoginWindow)
+        #self.loginEvent(MainLoginWindow)
 
 
     def eventsUi(self,MainLoginWindow):
@@ -138,9 +138,9 @@ class Ui_MainLoginWindow(object):
             self.window.show()
 
     def loginEvent(self,MainLoginWindow):
-        self.bloodbankadminpage = Ui_BloodBankMainWindow()
-        self.bloodbankadminpage.setupUi(MainLoginWindow)
-        return
+        #self.bloodbankadminpage = Ui_BloodBankMainWindow()
+        #self.bloodbankadminpage.setupUi(MainLoginWindow)
+        #return
         # Database Connectivity
         #################################
         #
@@ -168,7 +168,7 @@ class Ui_MainLoginWindow(object):
 
         # Please Delete This Line OtherWise You will be Fucked
         ############################################################
-        l.append(['D'])
+        #l.append(['D'])
         ###############################################################
         if len(l) == 0:
             self.window = QtWidgets.QDialog()

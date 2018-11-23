@@ -98,4 +98,24 @@ class Ui_addNewMedicineDialog(object):
         self.expiry_label.setText(_translate("addNewMedicineDialog", "Expiry Date"))
         self.mfDate_label.setText(_translate("addNewMedicineDialog", "MF Date"))
         self.addButton.setText(_translate("addNewMedicineDialog", "ADD "))
+        self.eventsUi(addNewMedicineDialog)
+
+    def eventsUi(self,addNewMedicineDialog):
+
+        # Add Medicine Button
+        self.addButton.clicked.connect(lambda : self.addNewMedicineFunction(addNewMedicineDialog))
+
+    def addNewMedicineFunction(self,addNewMedicineDialog):
+
+        # Check the Constraints
+
+        print("Kaam Kar raha hai")
+
+
+
+
+
+        ##############
+
+        addNewMedicineDialog.close()
 

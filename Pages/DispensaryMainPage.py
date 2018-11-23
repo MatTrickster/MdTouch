@@ -12,6 +12,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from DialogBox.EventDialogBox import *
 from DialogBox.changePassword import *
+from DialogBox.AddNewMedicineDialogBox import *
 
 class Ui_DispensaryMainWindow(object):
     def setupUi(self, DispensaryMainWindow,username):
@@ -290,6 +291,8 @@ class Ui_DispensaryMainWindow(object):
 
         self.change_password_button.clicked.connect(lambda: self.changePasswordFunction(DispensaryMainWindow))
 
+        self.addMedicineButton.clicked.connect(lambda : self.addMedicineEventFunction(DispensaryMainWindow))
+
     # Event Add Functionality
 
     def eventAddFunction(self, MainWindow):
@@ -330,4 +333,11 @@ class Ui_DispensaryMainWindow(object):
         self.window.setModal(True)
         self.window.setWindowTitle("Change Password")
         self.window.show()
+
+    def addMedicineEventFunction(self,MainWindow):
+        self.window = QtWidgets.QDialog()
+        self.dialog = Ui_addNewMedicineDialog()
+        self.dialog.setupUi(self.window)
+        self.window.show()
+
 

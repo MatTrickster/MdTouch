@@ -13,6 +13,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from DialogBox.changePassword import *
 from DialogBox.EventDialogBox import *
+from DialogBox.eventViewDialogBox import *
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -23,7 +24,6 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
-        MainWindow.setStyleSheet("background: rgb(66, 140, 244);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.logoLabel = QtWidgets.QLabel(self.centralwidget)
@@ -57,8 +57,8 @@ class Ui_MainWindow(object):
         self.refreshButton.setIcon(QIcon('Images/refreshIcon.png'))
         self.refreshButton.setIconSize(QSize(51,41))
         self.logoutButton.setIconSize(QSize(51,41))
-        self.logoutButton.setStyleSheet("background: rgb(66, 140, 244);")
-        self.refreshButton.setStyleSheet("background: rgb(66, 140, 244);")
+        #self.logoutButton.setStyleSheet("background: rgb(66, 140, 244);")
+        #self.refreshButton.setStyleSheet("background: rgb(66, 140, 244);")
 
         self.verticalLayoutWidget_4 = QtWidgets.QWidget(self.centralwidget)
         self.verticalLayoutWidget_4.setGeometry(QtCore.QRect(860, 210, 251, 701))
@@ -479,6 +479,10 @@ class Ui_MainWindow(object):
         # Add Nurse
         self.remove_test_button_3.clicked.connect(lambda: self.addNurseFunction(MainWindow))
 
+        # View All Event
+
+        self.viewAllEventButton.clicked.connect(lambda : self.viewAllEventFunction(MainWindow))
+
 
 
     # Logout Functionality
@@ -571,6 +575,15 @@ class Ui_MainWindow(object):
 
     def addEmergencyServicesFunction(self, MainWindow):
         pass
+
+    # View events
+
+    def viewAllEventFunction(self,MainWindow):
+        self.window = QtWidgets.QDialog()
+        self.dialog = Ui_EventListDialog()
+        self.dialog.setupUi(self.window)
+        self.window.show()
+
 
 
 

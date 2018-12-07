@@ -4,14 +4,18 @@ from PyQt5.QtWidgets import *
 from Pages.MainLoginPage import *
 from DialogBox.EventDialogBox import *
 from DialogBox.newUserRegistartion import *
+from Pages.BloodBankMainWindow import *
 
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("MdTouch")
+
         self.loginpage = Ui_MainLoginWindow()
         self.loginpage.setupUi(self)
+        #self.bloodbank = Ui_BloodBankMainWindow()
+        #self.bloodbank.setupUi(self)
         self.setFixedSize(1390,915)
         self.show()
 

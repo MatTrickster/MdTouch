@@ -28,7 +28,7 @@ class Ui_MainLoginWindow(object):
     def setupUi(self, MainLoginWindow):
         MainLoginWindow.setObjectName("MainLoginWindow")
         MainLoginWindow.resize(1387, 915)
-        MainLoginWindow.setStyleSheet("background: rgb(66, 140, 244);")
+        #MainLoginWindow.setStyleSheet("background: rgb(66, 140, 244);")
         self.centralwidget = QtWidgets.QWidget(MainLoginWindow)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -64,7 +64,6 @@ class Ui_MainLoginWindow(object):
         self.userNameInput.setStyleSheet("border: 2px solid gray;\n"
 "    border-radius: 10px;\n"
 "    padding: 0 8px;\n"
-"    background: rgb(211, 215, 207);\n"
 "    selection-background-color: darkgray;")
         self.userNameInput.setText("")
         self.userNameInput.setObjectName("userNameInput")
@@ -79,7 +78,6 @@ class Ui_MainLoginWindow(object):
         self.passwordInput.setStyleSheet("border: 2px solid gray;\n"
 "    border-radius: 10px;\n"
 "    padding: 0 8px;\n"
-"    background: rgb(211, 215, 207);\n"
 "    selection-background-color: darkgray;\n"
 "lineedit-password-character: 9679;")
         self.passwordInput.setText("")
@@ -194,9 +192,10 @@ class Ui_MainLoginWindow(object):
             pass
         elif l[0][0] == 'ES':
             #Open Emergency Services
+            pass
         else:
             # Nothing
-
+            pass
 
         conn.close()
         #except:

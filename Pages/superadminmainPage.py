@@ -14,6 +14,7 @@ from PyQt5.QtCore import *
 from DialogBox.changePassword import *
 from DialogBox.EventDialogBox import *
 from DialogBox.eventViewDialogBox import *
+from DialogBox.allHospitalList import *
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -483,6 +484,10 @@ class Ui_MainWindow(object):
 
         self.viewAllEventButton.clicked.connect(lambda : self.viewAllEventFunction(MainWindow))
 
+        # View All Hospital List
+
+        self.viewall_hospital_button.clicked.connect(lambda : self.viewAllHospitalsFunction(MainWindow))
+
 
 
     # Logout Functionality
@@ -584,6 +589,13 @@ class Ui_MainWindow(object):
         self.dialog.setupUi(self.window)
         self.window.show()
 
+    # View All Hospitals
+
+    def viewAllHospitalsFunction(self,MainWindow):
+        self.window = QtWidgets.QDialog()
+        self.dialog = Ui_HospitalListDialog()
+        self.dialog.setupUi(self.window)
+        self.window.show()
 
 
 
